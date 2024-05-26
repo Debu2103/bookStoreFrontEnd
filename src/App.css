@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Roboto',monospace;
+}
+
+.navbar{
+    font-family:'Roboto',monospace;
+    font-size:17px !important ;
+    line-height: 26px !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 8px 6px -6px gray;
+    border-bottom:0.2px solid gray !important;
+}
+
+.nav-link{
+    font-weight: 400 !important;
+}
+
+.active{
+    border-bottom: 2px solid black;
+        transition: 0.2s ease-in-out;
+
+}
+
+
+.footer{
+    color: white;
+    padding:25px;
+    background: rgb(158,158,158);
+background: linear-gradient(90deg, rgba(158,158,158,1) 0%, rgba(145,145,145,1) 99%, rgba(174,174,177,1) 100%);
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+}
+.footer a:hover{
+    color: #ffefba;
+    border-bottom: 1px solid white;
+}
+
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===================================
+========= register page  */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  flex-direction: column;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+.form-container form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.form-container form input {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+}
+
+.form-container form button {
+  border: 1px solid rgb(246, 10, 10);
+  border-radius: 0;
+  background-color: #000;
+  color: white;
+  width: 250px;
+}
+.button2 {
+  border: 1px solid rgb(246, 10, 10);
+  border-radius: 0;
+  background-color: #68beec;
+  color: rgb(39, 39, 39);
+  width: 250px;
+}
+
+.form-container form button:hover {
+  border: 1px solid black;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+
+body{
+  overflow-x: hidden;
+}
+
+
+.product-link{
+  text-decoration: none;
+  color: black;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.posa{
+  position: absolute !important;
+  margin-left: -18px;
+  margin-top: 4px;
+}
