@@ -1,14 +1,16 @@
-import React from 'react'
 import Layout from '../Components/Layout/Layout'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { useCart } from '../Context/cart'
+
 const ProductDetails = () => {
   const params = useParams()
   const [product, setProduct] = useState({})
   const [relatedProducts, setRelatedProducts] = useState([])
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
+  const [cart, setCart] = useCart()
 
   useEffect(() => {
     if (params?.slug) {
@@ -39,6 +41,11 @@ const ProductDetails = () => {
     }
   }
 
+  const handleAddToCart = () => {
+    setCart([...cart, product])
+    localStorage.setItem('cart', JSON.stringify([...cart, product]))
+  }
+
   return (
     <Layout>
       <div className='row container mt-2'>
@@ -59,10 +66,10 @@ const ProductDetails = () => {
           <h5>Name : {product.name}</h5>
           <h5>Description : {product.description}</h5>
           <h5>Price : ₹{product.price}</h5>
-          <h5>Category : {product.category?.name}</h5>{' '}
-          {/* Added category name */}
-          {/* <h5>Shipping : {product.shipping}</h5> */}
-          <button className='btn btn-secondary'>Add to cart</button>
+          <h5>Category : {product.category?.name}</h5>
+          <button className='btn btn-secondary ms-1' onClick={handleAddToCart}>
+            Add To Cart
+          </button>
         </div>
       </div>
       <div className='row '>
@@ -89,11 +96,9 @@ const ProductDetails = () => {
                     {p.description}
                   </p>
                   <p className='card-text'>₹{p.price}</p>
-
                   <button
-                    className='btn btn-primary 
-                    ms-1'
-                    onClick={() => Navigate(`/product/${p.slug}`)}
+                    className='btn btn-primary ms-1'
+                    onClick={() => navigate(`/product/${p.slug}`)}
                   >
                     More Details
                   </button>
