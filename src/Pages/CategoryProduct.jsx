@@ -27,8 +27,8 @@ const CategoryProduct = () => {
       <div className='container mt-3'>
         <h4 className='text-center'>Category - {category?.name}</h4>
         <h6 className='text-center'>{products?.length} results found </h6>
-        <div className="row">
-        <div className='d-flex flex-wrap'>
+        <div className='row'>
+          <div className='d-flex flex-wrap'>
             {products.length > 0 ? (
               products.map(p => (
                 <div
@@ -37,8 +37,8 @@ const CategoryProduct = () => {
                   key={p._id}
                 >
                   <img
-                    src={`http://localhost:3002/api/v1/products/photo/${p._id}`}
-                    style={{ objectFit: 'contain' }} 
+                    src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
+                    style={{ objectFit: 'contain' }}
                     className='card-img-top'
                     alt={p.name}
                     onError={e => {
@@ -55,11 +55,13 @@ const CategoryProduct = () => {
                     </p>
                     <p className='card-text'>₹{p.price}</p>
 
-                    <button className='btn btn-primary 
-                    ms-1' onClick={()=>Navigate( `/product/${p.slug}`)}>
+                    <button
+                      className='btn btn-primary 
+                    ms-1'
+                      onClick={() => Navigate(`/product/${p.slug}`)}
+                    >
                       More Details
                     </button>
-                   
                   </div>
                 </div>
               ))

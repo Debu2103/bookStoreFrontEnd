@@ -160,7 +160,7 @@ const HomePage = () => {
                   key={p._id}
                 >
                   <img
-                    src={`http://localhost:3002/api/v1/products/photo/${p._id}`}
+                    src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
                     style={{ objectFit: 'contain' }}
                     className='card-img-top'
                     alt={p.name}

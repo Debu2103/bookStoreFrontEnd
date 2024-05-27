@@ -44,7 +44,7 @@ const ProductDetails = () => {
       <div className='row container mt-2'>
         <div className='col-md-6'>
           <img
-            src={`http://localhost:3002/api/v1/products/photo/${product._id}`}
+            src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${product._id}`}
             className='card-img-top'
             alt={product.name}
             onError={e => {
@@ -72,7 +72,7 @@ const ProductDetails = () => {
             relatedProducts.map(p => (
               <div className='card m-2' style={{ width: '18rem' }} key={p._id}>
                 <img
-                  src={`http://localhost:3002/api/v1/products/photo/${p._id}`}
+                  src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
                   style={{ objectFit: 'contain' }}
                   className='card-img-top'
                   alt={p.name}

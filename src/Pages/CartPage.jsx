@@ -84,7 +84,7 @@ const CartPage = () => {
                 <div className='row mb-2 card  flex-row'>
                   <div className='col-md-4 mb-2'>
                     <img
-                      src={`http://localhost:3002/api/v1/products/photo/${p._id}`}
+                      src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
                       style={{
                         objectFit: 'contain',
                         width: '200px',
