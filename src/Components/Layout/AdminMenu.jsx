@@ -43,12 +43,12 @@ const AdminMenu = () => {
             </NavLink>
           </li> */}
           <li className='list-group-item '>
-            <NavLink
+            {/* <NavLink
               to='/dashboard/admin/users'
               style={{ textDecoration: 'none', color: 'black' }}
             >
               All Users
-            </NavLink>
+            </NavLink> */}
           </li>
         </ul>
       </div>
