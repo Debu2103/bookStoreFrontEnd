@@ -22,7 +22,7 @@ const UpdateProduct = () => {
   const navigate = useNavigate()
   const params = useParams()
 
-  axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+  axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
   axios.defaults.withCredentials = true
   const getSingleProduct = async () => {
     try {

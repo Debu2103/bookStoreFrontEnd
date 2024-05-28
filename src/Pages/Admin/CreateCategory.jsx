@@ -13,7 +13,7 @@ const CreateCategory = () => {
   const [selected, setSelected] = useState(null)
   const [updatedCatName, setUpdatedCatName] = useState('')
 
-  axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+  axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
   axios.defaults.withCredentials = true
 
   const getAllCategories = async () => {

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
 axios.defaults.withCredentials = true
 const Register = () => {
   const navigate = useNavigate()

@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   const [answer, setAnswer] = useState('')
   const [email, setEmail] = useState('')
   const navigate = useNavigate()
-  axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+  axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
   axios.defaults.withCredentials = true
 
   const handleSubmit = async e => {

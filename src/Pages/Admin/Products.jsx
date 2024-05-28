@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Products = () => {
   const [products, setProducts] = useState([])
-  axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+  axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
   axios.defaults.withCredentials = true
 
   const getAllProducts = async () => {
@@ -53,7 +53,7 @@ const Products = () => {
                       key={p._id}
                     >
                       <img
-                        src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
+                        src={`https://scrawny-quirky-asterisk.glitch.me/api/v1/products/photo/${p._id}`}
                         className='card-img-top'
                         alt={p.name}
                         onError={e => {

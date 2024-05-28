@@ -28,7 +28,7 @@ import AllCategories from './Pages/AllCategories'
 import CategoryProduct from './Pages/CategoryProduct'
 import CartPage from './Pages/CartPage'
 
-axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
 axios.defaults.withCredentials = true
 // import Layout from "./Components/Layout/Layout"
 function App () {

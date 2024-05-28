@@ -17,7 +17,7 @@ const CreateProduct = () => {
   const [shipping, setShipping] = useState('')
   const [category, setCategory] = useState('')
   const navigate = useNavigate()
-  axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+  axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
   axios.defaults.withCredentials = true
 
   const handleCreate = async e => {

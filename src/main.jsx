@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from './Context/auth.jsx'
 import { SearchProvider } from './Context/search.jsx'
 import { CartProvider } from './Context/cart.jsx'
-axios.defaults.baseURL = 'https://bookstorebackend-vez5.onrender.com/'
+axios.defaults.baseURL = 'https://scrawny-quirky-asterisk.glitch.me/'
 axios.defaults.withCredentials = true
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

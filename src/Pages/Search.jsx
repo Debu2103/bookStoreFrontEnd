@@ -19,7 +19,7 @@ const Search = () => {
             {values?.results.map(p => (
               <div className='card m-2' key={p._id} style={{ width: '18rem' }}>
                 <img
-                  src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
+                  src={`https://scrawny-quirky-asterisk.glitch.me/api/v1/products/photo/${p._id}`}
                   className='card-img-top'
                   style={{ objectFit: 'contain' }}
                   alt={p.name}

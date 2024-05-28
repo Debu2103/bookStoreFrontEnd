@@ -51,12 +51,14 @@ const CartPage = () => {
 
   const handlePayment = async () => {
     try {
-      const {nonce } = await instance.requestPaymentMethod()
-      const {data} = await axios.post('/api/v1/products/braintree/payments',{nonce,cart})
+      const { nonce } = await instance.requestPaymentMethod()
+      const { data } = await axios.post('/api/v1/products/braintree/payments', {
+        nonce,
+        cart
+      })
       localStorage.removeItem('cart')
       setCart([])
-      navigate("/dashboard/user/orders")
-      
+      navigate('/dashboard/user/orders')
     } catch (error) {
       console.log(error)
     }
@@ -84,7 +86,7 @@ const CartPage = () => {
                 <div className='row mb-2 card  flex-row'>
                   <div className='col-md-4 mb-2'>
                     <img
-                      src={`https://bookstorebackend-vez5.onrender.com/api/v1/products/photo/${p._id}`}
+                      src={`https://scrawny-quirky-asterisk.glitch.me/api/v1/products/photo/${p._id}`}
                       style={{
                         objectFit: 'contain',
                         width: '200px',
@@ -167,34 +169,32 @@ const CartPage = () => {
                 ''
               ) : (
                 <>
-                <DropIn
-      options={{
-        authorization: clientToken,
-        googlePay: {
-          flow: 'vault',
-          // Additional options for Google Pay configuration
-          googlePayVersion: 2,
-          merchantId: 'f29wnddhcwcb9x4q',
-          transactionInfo: {
-            totalPriceStatus: 'FINAL',
-            currencyCode: 'INR'
-          },
-          // Card types you want to support
-          
-        },
-        // Other payment options if needed
-        paypal: {
-          flow: 'vault'
-        },
-      }}
-      onInstance={instance => setInstance(instance)}
-    />
+                  <DropIn
+                    options={{
+                      authorization: clientToken,
+                      googlePay: {
+                        flow: 'vault',
+                        // Additional options for Google Pay configuration
+                        googlePayVersion: 2,
+                        merchantId: 'f29wnddhcwcb9x4q',
+                        transactionInfo: {
+                          totalPriceStatus: 'FINAL',
+                          currencyCode: 'INR'
+                        }
+                        // Card types you want to support
+                      },
+                      // Other payment options if needed
+                      paypal: {
+                        flow: 'vault'
+                      }
+                    }}
+                    onInstance={instance => setInstance(instance)}
+                  />
 
                   <button
                     className='btn btn-primary'
                     onClick={handlePayment}
                     disabled={loading || !instance || !auth?.user?.address}
-                    
                   >
                     {loading ? 'Processing ....' : 'Make Payment'}
                   </button>
